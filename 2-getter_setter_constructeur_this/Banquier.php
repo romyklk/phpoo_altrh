@@ -1,0 +1,3 @@
+<?php
+
+// TODO 4 : Créer une classe qui représente un banquier qui permet de récupérer grâce aux getters les informations et afficher son nom, prénom,age, son grade et lieu de travail.Si le lieu de travail n'est pas fourni alors ce sera Paris par défaut.Tous ces attributs sont requis et que l’âge doit être entre 18 et 65 ans compris.Le nom et le prénom doivent être de type string, et doivent être comprise etre 3 et 15 caractères.
