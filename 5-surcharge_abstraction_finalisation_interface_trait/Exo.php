@@ -14,27 +14,56 @@
 6.	Effectuer les affichages nécessaire. // echo
 
 */
-class Vehicule
+abstract class Vehicule
 {
-    public function demarrer()
+    final public function demarrer()
     {
         return 'je demarre';
     }
-    public function carburant()
-    {
-        return;
-    }
+    
+    abstract public function carburant();
+
     public function nombreDeTestObligatoire()
     {
         return 100;
     }
 }
 //-----------------------
-class Peugeot
+class Peugeot extends Vehicule
 {
+
+    public function carburant()
+    {
+        return 'Essence';
+    }
+
+    public function nombreDeTestObligatoire()
+    {
+        return parent::nombreDeTestObligatoire() + 70;
+    }
 }
 //-----------------------
-class Renault
+class Renault extends Vehicule
 {
+    public function carburant()
+    {
+        return 'Diesel';
+    }
+
+    public function nombreDeTestObligatoire()
+    {
+        return parent::nombreDeTestObligatoire() + 30;
+    }
 }
 //-----------------------
+
+$peugeot = new Peugeot;
+echo 'Peugeot : ' . $peugeot->demarrer() . '<br>';
+echo 'Carburant : ' . $peugeot->carburant() . '<br>';
+echo 'Nombre de test : ' . $peugeot->nombreDeTestObligatoire() . '<br>';
+
+echo '<hr>';
+$renault = new Renault;
+echo 'Renault : ' . $renault->demarrer() . '<br>';
+echo 'Carburant : ' . $renault->carburant() . '<br>';
+echo 'Nombre de test : ' . $renault->nombreDeTestObligatoire() . '<br>';

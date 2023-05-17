@@ -76,6 +76,7 @@ $this->element : fait appel à un élément d'un objet à l'intérieur de la cla
 $objet->element : fait appel à un élément d'un objet à l'extérieur de la classe.
 
 class::element : fait appel à un élément d'une classe à l'extérieur de la classe.
+
 self::element : fait appel à un élément d'une classe à l'intérieur de la classe.
 
 */

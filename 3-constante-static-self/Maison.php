@@ -62,5 +62,5 @@ echo "Le nombre de portes dans la maison est : " . $mamaison->getNbPorte() . " p
                 ***Je peux accéder à une propriété non static avec $this->
             ***Sinon (nom de l'objet->)
                 ***Je peux accéder à une propriété non static avec le nom de l'objet->
-   
+
 */
